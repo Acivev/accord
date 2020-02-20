@@ -12,6 +12,25 @@
         }
     }
 
+    svg {
+        position: absolute;
+        margin-top: 2.5px;
+        left: 0;
+
+        path {
+            transition: .5s;
+            fill: rgba(gray + 500, 0);
+        }
+    }
+
+    &.message .name {
+        color: rgba(gray + 500, 1);
+    }
+
+    &.message svg path {
+        fill: rgba(gray + 500, 1);
+    }
+
     .icon {
         font-size: 16px;
     }
@@ -20,6 +39,8 @@
         position: relative;
         padding-left: 5px;
         bottom: 2.5px;
+
+        transform: .5s;
 
         font-weight: normal;
     }
