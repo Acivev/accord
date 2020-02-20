@@ -1,0 +1,71 @@
+{
+    "Servers": [
+        {
+            "Id": 0,
+            "Name": "Server 0",
+            "Categories": [
+                {
+                    "Id": 0,
+                    "Name": "Information",
+                    "SubChannels": [
+                        {
+                            "Id": 0,
+                            "ChannelType": 0,
+                            "ChannelIcon": {
+                                "Id": 0,
+                                "Name": "Chat Icon",
+                                "Emote": "",
+                                "Image": null
+                            },
+                            "Name": "announcements",
+                            "Topic": "This is a sample Topic",
+                            "MessageHistory": [
+                                {
+                                    "Id": 0,
+                                    "User": {
+                                        "Id": 0,
+                                        "Name": "Bot"
+                                    },
+                                    "Message": "Hello World!"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "Logo": {
+                "File": null,
+                "Hash": ""
+            }
+        },
+        {
+            "Id": 1,
+            "Name": "Server 1",
+            "Categories": [
+                {
+                    "Id": 1,
+                    "Name": "Information",
+                    "SubChannels": []
+                },
+                {
+                    "Id": 2,
+                    "Name": "General",
+                    "SubChannels": []
+                }
+            ],
+            "Logo": {
+                "File": null,
+                "Hash": ""
+            }
+        },
+        {
+            "Id": 2,
+            "Name": "Server 2",
+            "Categories": [],
+            "Logo": {
+                "File": null,
+                "Hash": ""
+            }
+        }
+    ]
+}

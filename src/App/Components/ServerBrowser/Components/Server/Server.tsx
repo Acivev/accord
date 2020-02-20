@@ -17,7 +17,6 @@ function Server(props: any) {
         classes += "message ";
     */
 
-    console.log(server.Name);
     if (server === activeServer)
         classes += "selected ";
 

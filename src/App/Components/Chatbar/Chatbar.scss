@@ -1,0 +1,12 @@
+@import "Shared/Colors.scss";
+
+#Chatbar {
+    padding-top: 65px;
+    height: 100%;
+    width: 300px;
+
+    // TODO: Remove as the Chat has the Border
+    border-right: solid 1.2px rgba(#FFFF, 0.1);
+    
+    background-color: $COL-MAIN;
+}

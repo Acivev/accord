@@ -1,4 +1,6 @@
 @import "./Shared/Colors.scss";
+@import "./Assets/css/nerd-fonts-generated.min.css";
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 html {
   width: 100%;
@@ -7,14 +9,20 @@ html {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Roboto', 'Roboto Nerd Font', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
   background: fixed $COL-MAIN;
   color: $COL-TEXT;
+
+  width: 100%;
+  height: 100%;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
 }
 
 .bg-main {

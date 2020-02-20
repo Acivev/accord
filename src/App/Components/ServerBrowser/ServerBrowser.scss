@@ -4,7 +4,8 @@
     
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
 
-    z-index: 500;
+    position: absolute;
+    z-index: 999999999; // The server browser HAS to be ontop of Everything.
 
     .servers {
         display: block;

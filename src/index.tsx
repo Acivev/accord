@@ -1,17 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
 
-// Global style
 import "./index.scss";
 
 import App from "./App/App";
 import * as serviceWorker from "./serviceWorker";
-import { Provider } from "react-redux";
 import { SiteStateStore } from "./Shared/Globals";
 import { SampleServerList } from './Shared/Actions/ServerActions';
 
 // TODO: Remove and replace with Proper API
-SiteStateStore.dispatch(SampleServerList(5));
+SiteStateStore.dispatch(SampleServerList());
 
 ReactDOM.render(
     <Provider store={SiteStateStore}>

@@ -1,9 +1,11 @@
-export interface IServer {
-    Id: number,
-    Name: string,
+import { IImage } from './Image';
+import { ICategory } from './Chat';
 
-    Logo: {
-        File: string | null,
-        Hash: string
-    }
+export interface IServer {
+    Id: number
+    Name: string
+
+    Categories: ICategory[]
+
+    Logo: IImage
 }

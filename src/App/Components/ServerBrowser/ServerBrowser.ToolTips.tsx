@@ -2,17 +2,17 @@ import React from "react";
 import ReactTooltip from "react-tooltip";
 import { connect } from "react-redux";
 
+import 'Shared/ToolTips.scss';
 import "./ServerBrowser.scss";
 import { IServer } from "../../../API/v1/Server";
-
-import 'Shared/ToolTips.scss';
 
 function ServerBrowserToolTips(props: any) {
   const ServerListToolTips = [];
 
   for (const server of props.ServerList as IServer[]) {
     ServerListToolTips.push(
-        <ReactTooltip id={"tooltip-server-" + server.Id}
+        <ReactTooltip key={"tooltip-server-" + server.Id}
+                      id={"tooltip-server-" + server.Id}
                       effect='solid'
                       place={"bottom"}
                       className="custom"

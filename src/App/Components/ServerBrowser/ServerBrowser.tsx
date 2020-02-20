@@ -14,7 +14,6 @@ function ServersWheelEvent(event: React.WheelEvent<HTMLDivElement>) {
   });
 }
 
-
 function ServerBrowser(props: any) {
   const ServerList = [];
 

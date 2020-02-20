@@ -1,0 +1,26 @@
+#Channel {
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba(gray, .2);
+        .icon {
+            color: gray + 100;
+        }
+
+        .name {
+            color: gray + 100;
+        }
+    }
+
+    .icon {
+        font-size: 16px;
+    }
+
+    .name {
+        position: relative;
+        padding-left: 5px;
+        bottom: 2.5px;
+
+        font-weight: normal;
+    }
+}

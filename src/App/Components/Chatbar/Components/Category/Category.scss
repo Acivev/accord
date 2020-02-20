@@ -1,0 +1,54 @@
+@import "Shared/Colors.scss";
+
+#Category {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    color: gray;
+    font-size: 12px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    user-select: none;
+
+    &.hidden .SubChannels {
+        display: none;
+    }
+
+    &.hidden svg {
+        transform: rotate(-90deg);
+    }
+
+    span.category.name {
+        width: 500px;
+        color: gray;
+
+        &:hover {
+            color: gray + 100;
+    
+            svg path {
+                fill: gray + 100;
+            }
+        }
+    }
+
+    .SubChannels {
+        margin-top: 5px;
+        margin-left: 12px;
+
+        transition: .5s;
+    }
+
+    svg {
+        width: 12px;
+        height: 12px;
+
+        transition: .5s;
+
+        path {
+            fill: gray;
+        }
+    }
+}

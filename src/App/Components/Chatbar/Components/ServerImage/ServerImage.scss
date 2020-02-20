@@ -1,0 +1,10 @@
+@import "Shared/Colors.scss";
+
+#ServerImage {
+    height: 200px;
+        
+    background: linear-gradient(180deg, rgba(66, 54, 82, 0) 52.08%, $COL-MAIN 100%), url("SampleImage.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}

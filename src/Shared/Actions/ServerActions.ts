@@ -1,25 +1,32 @@
 import { AnyAction, Reducer } from "redux";
 import { IServer } from "../../API/v1/Server";
 
+
+// Dispatchable Events
+import sampleData from './sample_data.json';
+import { ICategory } from './../../API/v1/Chat';
+
 export interface IServerActionState {
     ActiveServer: IServer | null
 
     ServerList: IServer[]
+
+    HiddenCategories: ICategory[]
 }
 
 export enum ServerActions {
     UPDATE = "server.list.update",
 
     SET_ACTIVE = "server.active.set",
+    HIDE_CATEGORY = "server.category.hide",
+    SHOW_CATEGORY = "server.category.show",
 }
 
 export interface IServerAction extends AnyAction, IServerActionState { }
 
-
-
-
 const EmptyServerList: IServerActionState = {
     ActiveServer: null,
+    HiddenCategories: [],
     ServerList: []
 };
 
@@ -29,42 +36,51 @@ export const ServerActionReducer: Reducer<IServerActionState, IServerAction> =
             case ServerActions.UPDATE:
                 return { 
                     ActiveServer: state.ActiveServer,
-                    ServerList: action.ServerList
+                    ServerList: action.ServerList,
+                    HiddenCategories: state.HiddenCategories
                 };
 
             case ServerActions.SET_ACTIVE:
                 return {
                     ActiveServer: action.ActiveServer,
-                    ServerList: state.ServerList
+                    ServerList: state.ServerList,
+                    HiddenCategories: state.HiddenCategories
                 };
+
+            case ServerActions.HIDE_CATEGORY:
+                return {
+                    ActiveServer: state.ActiveServer,
+                    ServerList: state.ServerList,
+                    HiddenCategories: state.HiddenCategories.concat(action.HiddenCategories)
+                }
+
+            case ServerActions.SHOW_CATEGORY:
+                return {
+                    ActiveServer: state.ActiveServer,
+                    ServerList: state.ServerList,
+                    HiddenCategories: state.HiddenCategories.filter((el) => !action.HiddenCategories.includes(el))
+                }
 
             default:
                 return state;
         }
     };
 
-
-
-// Dispatchable Events
-
-export const SampleServerList = (n: number) => {
-    const list: IServer[] = [];
-
-    for (let i = 0; i < n; i++) {
-        list.push({
-            Id: i,
-            Name: "Server " + i,
-            Logo: {
-                File: null,
-                Hash: ""
-            }
-        })
-    }
+export const SampleServerList = () => {
+    const list: IServer[] = sampleData.Servers;
 
     return { type: ServerActions.UPDATE, ServerList: list } as IServerAction;
 }
 
 export const SetActiveServer = (server: IServer) => {
     return { type: ServerActions.SET_ACTIVE, ActiveServer: server } as IServerAction;
+}
+
+export const HideCategory = (category: ICategory) => {
+    return { type: ServerActions.HIDE_CATEGORY, HiddenCategories: [category] } as IServerAction;
+}
+
+export const ShowCategory = (category: ICategory) => {
+    return { type: ServerActions.SHOW_CATEGORY, HiddenCategories: [category] } as IServerAction;
 }
 
