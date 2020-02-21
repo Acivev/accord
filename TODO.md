@@ -1,5 +1,10 @@
 # TODO
 
+## Maintenance
+
+* [ ] Document Everything
+* [ ] Standardize CodeStyle
+
 ## Basic Design
 
 * [x] Server Browser

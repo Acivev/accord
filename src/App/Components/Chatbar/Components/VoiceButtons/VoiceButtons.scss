@@ -1,0 +1,88 @@
+@import "Shared/Colors.scss";
+
+#VoiceButtons {
+    position: absolute;
+
+    background-color: $COL-THI;
+
+    width: 300px;
+
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    bottom: 0;
+
+    .left {
+        position: absolute;
+        
+        bottom: 2.5px;
+
+        margin-left: 10px;
+
+        left: 0;
+    }
+
+    .right {
+        position: absolute;
+
+        bottom: 2.5px;
+
+        margin-right: 10px;
+
+        right: 0;
+    }
+
+    svg:hover {
+        background-color: rgba(255, 255, 255, 0.151);
+    }
+
+    svg.mic:hover path {
+        fill: greenyellow;
+    }
+
+    svg.mic.muted {
+        &:hover path {
+            fill: $COL-ERROR;
+        }
+        path {
+            fill: $COL-ERROR;
+        }
+    }
+
+    svg.headphones:hover path {
+        fill: greenyellow;
+    }
+
+    svg.headphones.deafen {
+        &:hover path {
+            fill: $COL-ERROR;
+        }
+        path {
+            fill: $COL-ERROR;
+        }
+    }
+
+    svg.hangup:hover path {
+        fill: $COL-ERROR;
+    }
+
+    svg.screenshare:hover path {
+        fill: $COL-PRIMARY;
+    }
+
+
+    svg {
+        transition: .2s;
+        border-radius: 5px;
+        
+        margin-left: 5px;
+
+        padding: 10px;
+
+        cursor: pointer;
+
+        path {
+            transition: .3s;
+        }
+    }
+}

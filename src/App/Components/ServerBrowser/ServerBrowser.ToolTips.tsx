@@ -3,8 +3,7 @@ import ReactTooltip from "react-tooltip";
 import { connect } from "react-redux";
 
 import 'Shared/ToolTips.scss';
-import "./ServerBrowser.scss";
-import { IServer } from "../../../API/v1/Server";
+import { IServer } from "../../../API/v1/Servers/Server";
 
 function ServerBrowserToolTips(props: any) {
   const ServerListToolTips = [];

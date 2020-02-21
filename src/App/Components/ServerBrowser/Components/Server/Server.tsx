@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import "./Server.scss";
 import { SetActiveServer } from '../../../../../Shared/Actions/ServerActions';
 import { SiteStateStore } from '../../../../../Shared/Globals';
-import { IServer } from './../../../../../API/v1/Server';
+import { IServer } from '../../../../../API/v1/Servers/Server';
 
 function Server(props: any) {
     let classes = "";

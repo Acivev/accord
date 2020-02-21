@@ -1,5 +1,5 @@
-import { IIcon } from './Image';
-import { IUser } from './User';
+import { IIcon } from '../Image';
+import { IUser } from '../User';
 
 export enum ChannelType {
     Text = 0,

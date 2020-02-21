@@ -1,10 +1,10 @@
 import { AnyAction, Reducer } from "redux";
-import { IServer } from "../../API/v1/Server";
+import { IServer } from "../../API/v1/Servers/Server";
 
 
 // Dispatchable Events
 import sampleData from './sample_data.json';
-import { ICategory } from './../../API/v1/Chat';
+import { ICategory } from './../../API/v1/Servers/Chat';
 
 export interface IServerActionState {
     ActiveServer: IServer | null

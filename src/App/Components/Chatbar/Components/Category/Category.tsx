@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import './Category.scss'
-import { ICategory } from './../../../../../API/v1/Chat';
+import { ICategory } from './../../../../../API/v1/Servers/Chat';
 import Channel from './Components/Channel/Channel';
 import { SiteStateStore } from './../../../../../Shared/Globals';
 import { ShowCategory, HideCategory } from '../../../../../Shared/Actions/ServerActions';

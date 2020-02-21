@@ -1,7 +1,7 @@
 import React, { Props } from 'react';
 
 import './Channel.scss'
-import { IChannel } from '../../../../../../../API/v1/Channel';
+import { IChannel } from '../../../../../../../API/v1/Servers/Channel';
 
 export interface ChannelProps extends Props<ChannelProps> {
     Channel: IChannel,

@@ -3,8 +3,9 @@ import { connect } from 'react-redux';
 
 import './Chatbar.scss'
 import ServerImage from './Components/ServerImage/ServerImage';
-import { IServer } from '../../../API/v1/Server';
+import { IServer } from '../../../API/v1/Servers/Server';
 import Category from './Components/Category/Category';
+import VoiceButtons from './Components/VoiceButtons/VoiceButtons';
 
 function Chatbar(props: any) {
     if (!props.ActiveServer)
@@ -22,7 +23,13 @@ function Chatbar(props: any) {
         <div id="Chatbar">
             <ServerImage />
             
-            { categoryList }
+            <div className="list">
+                { categoryList }
+            </div>
+
+            <div className="voice">
+                <VoiceButtons />
+            </div>
 
         </div>
     )

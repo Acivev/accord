@@ -1,4 +1,4 @@
-import { IImage } from './Image';
+import { IImage } from '../Image';
 import { ICategory } from './Chat';
 
 export interface IServer {
