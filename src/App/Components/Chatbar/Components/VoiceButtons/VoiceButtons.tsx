@@ -9,7 +9,7 @@ import ScreenShareIcon from '@material-ui/icons/ScreenShare';
 import MicIcon from '@material-ui/icons/Mic';
 
 import { SiteStateStore } from "../../../../../Shared/Globals";
-import { VoiceToggleMute, VoiceToggleDeafen } from './../../../../../Shared/Actions/VoiceActions';
+import { VoiceToggleMute, VoiceToggleDeafen, VoiceLeave } from './../../../../../Shared/Actions/VoiceActions';
 
 function ToggleMic(e: any) {
     SiteStateStore.dispatch(VoiceToggleMute());
@@ -22,6 +22,7 @@ function DeafenMic(e: any) {
 function VoiceButtons(props: any) {
     let micIcon;
     let deafIcon;
+    let leaveIcon;
 
     // TODO: Add some fancy sounds!
     if (props.Muted)
@@ -34,6 +35,9 @@ function VoiceButtons(props: any) {
     else
         deafIcon = <HeadsetIcon data-tip data-for="tooltip-headphones" className="headphones" onClick={DeafenMic} />;
     
+    if (props.ActiveServer != null)
+        leaveIcon = <PhoneDisabledIcon data-tip data-for="tooltip-hangup" className="hangup" onClick={_ => SiteStateStore.dispatch(VoiceLeave())} />;
+
     return (
         <div id="VoiceButtons" >
            
@@ -44,7 +48,7 @@ function VoiceButtons(props: any) {
             <div className="right">
                 {micIcon}
                 {deafIcon}
-                <PhoneDisabledIcon data-tip data-for="tooltip-hangup" className="hangup" />
+                {leaveIcon}
             </div>
 
         </div>

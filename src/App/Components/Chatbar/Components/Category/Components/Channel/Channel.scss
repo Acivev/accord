@@ -1,6 +1,8 @@
 #Channel {
     cursor: pointer;
 
+    width: 105%;
+
     &:hover {
         background-color: rgba(gray, .2);
         .icon {
@@ -10,9 +12,13 @@
         .name {
             color: gray + 100;
         }
+
+        svg.voiceJoin {
+            display: inline;
+        }
     }
 
-    svg {
+    svg.notification {
         position: absolute;
         margin-top: 2.5px;
         left: 0;
@@ -35,10 +41,32 @@
         font-size: 18px;
     }
 
+    svg.voiceJoin {
+        position: absolute;
+
+        width: 18px;
+        height: 18px;
+
+        padding: 5px;
+
+        margin-top: -3px;
+        left: 270px;
+
+        transition: 0s;
+
+        display: none;
+
+        &:hover {
+            path {
+                fill: rgba(gray + 500, 1);
+            }
+        }
+    }
+
     .name {
         position: relative;
         padding-left: 5px;
-        bottom: 2.5px;
+        bottom: 2px;
 
         transform: .5s;
 

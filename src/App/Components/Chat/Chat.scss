@@ -1,6 +1,13 @@
 #Chat {
-    height: 100%;
-    width: 100%;
+    position: absolute;
+
+    height: calc(100% - 65px);
+    width: calc(100% - 300px);
+
+    padding-top: 65px;
+    left: 300px;
+
+    top: 0;
     
     background-color: green;
 }

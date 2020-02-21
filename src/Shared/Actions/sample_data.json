@@ -10,13 +10,18 @@
                     "SubChannels": [
                         {
                             "Id": 0,
-                            "ChannelType": 0,
                             "ChannelIcon": {
                                 "Id": 0,
                                 "Name": "Chat Icon",
                                 "Emote": "",
                                 "Image": null
                             },
+                            "VoiceConnectedUsers": [
+                                {
+                                    "Id": 0,
+                                    "Name": "Bot"
+                                }
+                            ],
                             "Name": "announcements",
                             "Topic": "This is a sample Topic",
                             "MessageHistory": [

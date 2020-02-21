@@ -13,7 +13,7 @@ export interface IChannel {
 
     ChannelIcon: IIcon
 
-    ChannelType: ChannelType
+    VoiceConnectedUsers: IUser[]
 
     MessageHistory: ({
         Id: number

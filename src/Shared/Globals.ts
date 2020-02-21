@@ -7,4 +7,7 @@ const AllReducer = combineReducers({
     VoiceActionReducer
 });
 
-export const SiteStateStore = createStore(AllReducer);
+export const SiteStateStore = createStore(AllReducer,
+    // Redux debugger
+    (window as any).__REDUX_DEVTOOLS_EXTENSION__&& (window as any).__REDUX_DEVTOOLS_EXTENSION__()
+);
