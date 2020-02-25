@@ -1,6 +1,8 @@
 #Chat {
     position: absolute;
 
+    display: flex;
+
     height: calc(100% - 65px);
     width: calc(100% - 300px);
 
@@ -9,5 +11,7 @@
 
     top: 0;
     
-    background-color: green;
+    background-color: #141018;
+    box-shadow: 0px 0px 4px #000000;
+
 }

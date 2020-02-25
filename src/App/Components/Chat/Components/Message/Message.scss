@@ -1,0 +1,41 @@
+@import "Shared/Colors.scss";
+
+#Message {
+    position: relative;
+
+    .avatar {
+        position: absolute;
+        width: 64px;
+        height: 64px;
+
+        font-size: 60%;
+    }
+
+    .name {
+        position: relative;
+        left: 80px;
+        top: 10px;
+
+        color: white;
+        font-weight: bold;
+
+        .identifier {
+            position: relative;
+
+            font-size: .8em;
+            top: -.5%;
+            left: -2%;
+
+            font-weight: normal;
+            color: rgb(white - 1)
+        }
+    }
+
+    .timeAgo {
+
+    }
+
+    .message {
+
+    }
+}

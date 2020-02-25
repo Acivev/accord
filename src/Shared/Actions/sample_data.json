@@ -19,7 +19,9 @@
                             "VoiceConnectedUsers": [
                                 {
                                     "Id": 0,
-                                    "Name": "Bot"
+                                    "Name": "Bot",
+                                    "Status": 0,
+                                    "Identifier": 4492
                                 }
                             ],
                             "Name": "announcements",
@@ -29,9 +31,12 @@
                                     "Id": 0,
                                     "User": {
                                         "Id": 0,
-                                        "Name": "Bot"
+                                        "Name": "Bot",
+                                        "Status": 0,
+                                        "Identifier": 4492
                                     },
-                                    "Message": "Hello World!"
+                                    "Message": "Hello World!",
+                                    "Timestamp": 1582562890371
                                 }
                             ]
                         }

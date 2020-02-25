@@ -9,13 +9,16 @@ import Chat from "./Components/Chat/Chat";
 import Userbar from "./Components/Userbar/Userbar";
 import VoiceButtonsTooltips from "./Components/Chatbar/Components/VoiceButtons/VoiceButtons.Tooltips";
 import ChannelTooltips from "./Components/Chatbar/Components/Category/Components/Channel/Channel.Tooltips";
+import AvatarTooltips from "./Components/Shared/Avatar/Avatar.Tooltips";
 
 function App() {
   return <div className="App">
     <ServerBrowser />
+
     <ServerBrowserToolTips />
     <VoiceButtonsTooltips />
     <ChannelTooltips />
+    <AvatarTooltips />
     
     <div id="ServerInformation">
       <Chatbar />

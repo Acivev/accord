@@ -15,9 +15,12 @@ export interface IChannel {
 
     VoiceConnectedUsers: IUser[]
 
-    MessageHistory: ({
-        Id: number
-        User: IUser,
-        Message: string
-    })[]
+    MessageHistory: IMessage[]
+}
+
+export interface IMessage {
+    Id: number
+    User: IUser,
+    Message: string,
+    Timestamp: number
 }

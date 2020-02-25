@@ -1,0 +1,58 @@
+@import "Shared/Colors.scss";
+
+#Avatar {
+    width: 128px;
+    height: 128px;
+
+    &:active {
+        transform: translateY(2.5px);
+    }
+
+    .image {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        background-color: $COL-ERROR;
+        border-radius: 78.125%;
+
+        transition: .3s;
+
+        &:hover {
+            border-radius: 30px;
+        }
+    }
+
+    .status {
+        position: relative;
+
+        width: 30%;
+        height: 30%;
+
+        border-radius: 100%;
+
+        margin-top: -40%;
+        margin-left: 60%;
+
+        font-size: 60%; // There is no border %, but this works...
+        border: solid 1em #141018;
+
+        background-color: $COL-SUCCESS;
+
+        .active {
+            background-color: $COL-SUCCESS;
+        }
+    
+        .away {
+            background-color: $COL-WARNING;
+        }
+        
+        .busy {
+            background-color: $COL-ERROR;
+        }
+    
+        .offline {
+            background-color: $COL-NONE;
+        }
+    }
+}

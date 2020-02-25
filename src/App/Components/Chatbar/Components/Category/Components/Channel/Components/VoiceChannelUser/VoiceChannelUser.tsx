@@ -3,7 +3,7 @@ import React, { Props } from "react";
 import "./VoiceChannelUser.scss";
 import { IUser } from './../../../../../../../../../API/v1/User';
 
-import SampleImage from './SampleImage.png';
+// import SampleImage from './SampleImage.png';
 
 export interface VoiceUserProps extends Props<VoiceUserProps> {
     User: IUser

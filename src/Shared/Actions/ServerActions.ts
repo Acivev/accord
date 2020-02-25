@@ -5,9 +5,11 @@ import { IServer } from "../../API/v1/Servers/Server";
 // Dispatchable Events
 import sampleData from './sample_data.json';
 import { ICategory } from './../../API/v1/Servers/Chat';
+import { IChannel } from "../../API/v1/Servers/Channel";
 
 export interface IServerActionState {
     ActiveServer: IServer | null
+    ActiveChannel: IChannel | null
 
     ServerList: IServer[]
 
@@ -26,6 +28,8 @@ export interface IServerAction extends AnyAction, IServerActionState { }
 
 const EmptyServerList: IServerActionState = {
     ActiveServer: null,
+    ActiveChannel: null,
+
     HiddenCategories: [],
     ServerList: []
 };
@@ -36,13 +40,16 @@ export const ServerActionReducer: Reducer<IServerActionState, IServerAction> =
             case ServerActions.UPDATE:
                 return { 
                     ActiveServer: state.ActiveServer,
+                    ActiveChannel: state.ActiveChannel,
                     ServerList: action.ServerList,
                     HiddenCategories: state.HiddenCategories
                 };
 
             case ServerActions.SET_ACTIVE:
                 return {
-                    ActiveServer: action.ActiveServer,
+                    ActiveServer: !action.ActiveServer ? state.ActiveServer : action.ActiveServer,
+                    ActiveChannel: action.ActiveChannel,
+
                     ServerList: state.ServerList,
                     HiddenCategories: state.HiddenCategories
                 };
@@ -50,6 +57,8 @@ export const ServerActionReducer: Reducer<IServerActionState, IServerAction> =
             case ServerActions.HIDE_CATEGORY:
                 return {
                     ActiveServer: state.ActiveServer,
+                    ActiveChannel: state.ActiveChannel,
+
                     ServerList: state.ServerList,
                     HiddenCategories: state.HiddenCategories.concat(action.HiddenCategories)
                 }
@@ -57,6 +66,8 @@ export const ServerActionReducer: Reducer<IServerActionState, IServerAction> =
             case ServerActions.SHOW_CATEGORY:
                 return {
                     ActiveServer: state.ActiveServer,
+                    ActiveChannel: state.ActiveChannel,
+
                     ServerList: state.ServerList,
                     HiddenCategories: state.HiddenCategories.filter((el) => !action.HiddenCategories.includes(el))
                 }
@@ -73,7 +84,11 @@ export const SampleServerList = () => {
 }
 
 export const SetActiveServer = (server: IServer) => {
-    return { type: ServerActions.SET_ACTIVE, ActiveServer: server } as IServerAction;
+    return { type: ServerActions.SET_ACTIVE, ActiveChannel: null, ActiveServer: server } as IServerAction;
+}
+
+export const SetActiveChannel = (channel: IChannel) => {
+    return { type: ServerActions.SET_ACTIVE, ActiveChannel: channel, ActiveServer: null } as IServerAction;
 }
 
 export const HideCategory = (category: ICategory) => {
