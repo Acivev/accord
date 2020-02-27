@@ -22,6 +22,16 @@
         flex-flow: column-reverse;
 
         overflow-y: scroll;
+
+        &::-webkit-scrollbar-track {
+            width: 1px;
+            background-color: #141018;
+          }
+          
+        &::-webkit-scrollbar-track-piece {
+          width: 1px;
+          background-color: #141018;
+        }
     }
 
     
