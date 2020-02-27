@@ -1,8 +1,18 @@
 {
+    "LocalUser": {
+        "Id": 1,
+        "Name": "Mempler",
+        "Status": 0,
+        "Identifier": 6666
+    },
     "Servers": [
         {
             "Id": 0,
             "Name": "Server 0",
+            "Logo": {
+                "File": null,
+                "Hash": ""
+            },
             "Categories": [
                 {
                     "Id": 0,
@@ -26,6 +36,8 @@
                             ],
                             "Name": "announcements",
                             "Topic": "This is a sample Topic",
+                            "MessageCount": 2,
+                            "MessagesRead": 2,
                             "MessageHistory": [
                                 {
                                     "Id": 0,
@@ -37,45 +49,23 @@
                                     },
                                     "Message": "Hello World!",
                                     "Timestamp": 1582562890371
+                                },
+                                {
+                                    "Id": 1,
+                                    "User": {
+                                        "Id": 0,
+                                        "Name": "Bot",
+                                        "Status": 0,
+                                        "Identifier": 4492
+                                    },
+                                    "Message": "I don't have lorem ipsum which means i gotta do all the messages Manually... well... how is life ? i hope it's pretty good as i need a shit long message to make sure EVERYTHING works totally fine smile... i still need a longer text.. FUCK. well, lets see how long i can get it by adding more and more words to it so he said, now he thinks about how much text does he still need ? well... Nobody will ever know, except me of course :) well, guess I'm a narrator now cause why not! Hello mine turtle, HELLO! i like twains.",
+                                    "Timestamp": 1582717800039
                                 }
                             ]
                         }
                     ]
                 }
-            ],
-            "Logo": {
-                "File": null,
-                "Hash": ""
-            }
-        },
-        {
-            "Id": 1,
-            "Name": "Server 1",
-            "Categories": [
-                {
-                    "Id": 1,
-                    "Name": "Information",
-                    "SubChannels": []
-                },
-                {
-                    "Id": 2,
-                    "Name": "General",
-                    "SubChannels": []
-                }
-            ],
-            "Logo": {
-                "File": null,
-                "Hash": ""
-            }
-        },
-        {
-            "Id": 2,
-            "Name": "Server 2",
-            "Categories": [],
-            "Logo": {
-                "File": null,
-                "Hash": ""
-            }
+            ]
         }
     ]
 }

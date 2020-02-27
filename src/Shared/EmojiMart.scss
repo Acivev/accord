@@ -1,0 +1,29 @@
+@import "../../node_modules/emoji-mart/css/emoji-mart.css";
+@import "Shared/Colors.scss";
+
+.emoji-mart {
+    box-shadow: 0px 0px 15px #0000007a;
+}
+
+.emoji-mart-dark {
+    color: #fff;
+    border: none;
+    background-color: $COL-MAIN;
+}
+
+.emoji-mart-dark .emoji-mart-bar {
+    background-color: $COL-MAIN;
+}
+
+.emoji-mart-dark .emoji-mart-search input {
+    background-color: $COL-THI;
+    border: none;
+}
+
+.emoji-mart-dark .emoji-mart-category .emoji-mart-emoji:hover:before {
+    background-color: $COL-MAIN + 20;
+}
+
+.emoji-mart-dark .emoji-mart-category-label span {
+    background-color: $COL-MAIN;
+}

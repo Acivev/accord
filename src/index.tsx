@@ -7,11 +7,12 @@ import "./index.scss";
 import App from "./App/App";
 import * as serviceWorker from "./serviceWorker";
 import { SiteStateStore } from "./Shared/Globals";
-import { SampleServerList, SetActiveServer } from './Shared/Actions/ServerActions';
+import { SampleServerList, SetActive, SampleLocalUser } from './Shared/Actions/ServerActions';
 
 // TODO: Remove and replace with Proper API
 SiteStateStore.dispatch(SampleServerList());
-SiteStateStore.dispatch(SetActiveServer(SiteStateStore.getState().ServerActionReducer.ServerList[0]))
+SiteStateStore.dispatch(SampleLocalUser());
+SiteStateStore.dispatch(SetActive(SiteStateStore.getState().ServerActionReducer.ServerList[0]))
 
 ReactDOM.render(
     <Provider store={SiteStateStore}>

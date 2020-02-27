@@ -1,8 +1,11 @@
 @import "Shared/Colors.scss";
 
 #Avatar {
+    position: relative;
     width: 128px;
     height: 128px;
+
+    padding: 2.5px;
 
     &:active {
         transform: translateY(2.5px);
@@ -14,12 +17,12 @@
         height: 100%;
 
         background-color: $COL-ERROR;
-        border-radius: 78.125%;
+        border-radius: 50%;
 
         transition: .3s;
 
         &:hover {
-            border-radius: 30px;
+            border-radius: 30%;
         }
     }
 

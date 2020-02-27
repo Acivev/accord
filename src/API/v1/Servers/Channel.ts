@@ -15,6 +15,8 @@ export interface IChannel {
 
     VoiceConnectedUsers: IUser[]
 
+    MessageCount: number
+    MessagesRead: number
     MessageHistory: IMessage[]
 }
 
