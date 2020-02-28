@@ -20,10 +20,6 @@ function Message(props: MessageProps) {
     let match = regex.exec(props.Message.Message);
 
     while (match) {
-        match = regex.exec(props.Message.Message);
-        if (!match)
-            break;
-
         const previousText = props.Message.Message.substring(
             lastOffset,
             match.index
@@ -48,7 +44,11 @@ function Message(props: MessageProps) {
             msg.push(emoji);
         } else {
             msg.push(match[0]);
-        }        
+        }
+        
+        match = regex.exec(props.Message.Message);
+        if (!match)
+            break;
     }
 
     if (lastOffset === 0)
