@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
+import OutsideClickHandler from 'react-outside-click-handler';
+import { connect } from 'react-redux';
+import { Emoji, Picker } from 'emoji-mart';
 
 import './Chat.scss'
-import { connect } from 'react-redux';
+
+import Message from './Components/Message/Message';
 import { IServer } from './../../../API/v1/Servers/Server';
 import { IChannel } from '../../../API/v1/Servers/Channel';
-import Message from './Components/Message/Message';
-
-import 'Shared/EmojiMart.scss';
 import { SiteStateStore } from '../../../Shared/Globals';
 import { SendMessage } from './../../../Shared/Actions/ServerActions';
+
+import 'Shared/EmojiMart.scss';
+
 
 function OnSubmitChatMessage(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -24,6 +28,10 @@ function OnSubmitChatMessage(e: React.FormEvent<HTMLFormElement>) {
 }
 
 function Chat(props: any) {
+    const [state, setState] = useState({
+        IsPicking: false
+    });
+
     const activeServer: IServer = props.ActiveServer;
     const channel: IChannel = props.ActiveChannel;
 
@@ -36,7 +44,7 @@ function Chat(props: any) {
         messageHistory.push(<Message Message={message} />)
     }
 
-    //const picker = <Picker autoFocus={true} set="twitter" title="Select an Emoji..." />
+    const picker = <Picker autoFocus={true} set="twitter" title="Select an Emoji..." />
 
     return (
         <div id="Chat">
@@ -48,6 +56,14 @@ function Chat(props: any) {
                 <div className="chatInput">
                     <input placeholder="Type to Chat..."></input>
                 </div>
+
+                <OutsideClickHandler onOutsideClick={_ => setState({ IsPicking: false })}>
+                { state.IsPicking ? picker : (<section />) }
+            
+                <div className={"EmojiPicker " + (state.IsPicking ? "active" : "")}>
+                    <Emoji emoji=":smile:" size={32} onClick={_ => setState({ IsPicking: !state.IsPicking })}/>
+                </div>
+                </OutsideClickHandler>
             </form>
         </div>
     )

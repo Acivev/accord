@@ -54,8 +54,6 @@ function Message(props: MessageProps) {
     if (lastOffset === 0)
         msg.push(<span>{props.Message.Message}</span>);
 
-    console.log(msg);
-
     return (
         <div id="Message" >
             <Avatar className="avatar" User={props.Message.User} />

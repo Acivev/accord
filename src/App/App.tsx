@@ -1,4 +1,5 @@
 import React from "react";
+import SplitPane from 'react-split-pane';
 
 import "./App.scss";
 
@@ -21,9 +22,15 @@ function App() {
     <AvatarTooltips />
     
     <div id="ServerInformation">
+      <SplitPane split="vertical" minSize={200} defaultSize={300} allowResize={true}>
+
       <Chatbar />
+
       <Chat />
-      <Userbar />
+      
+      </SplitPane>
+      
+      {}
     </div>
   </div>;
 }

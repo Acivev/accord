@@ -1,10 +1,8 @@
 @import "Shared/Colors.scss";
 
 #Chat {
-    position: absolute;
-
     height: calc(100% - 67px);
-    width: calc(100% - 300px);
+    width: 100%;
 
     background-color: #141018;
     box-shadow: 0px 0px 4px #000000;
@@ -59,6 +57,32 @@
                 outline: none;
                 
             }
+        }
+    }
+
+    .emoji-mart {
+        bottom: 30px;
+        right: 30px;
+        position: fixed;
+    }
+
+    .EmojiPicker {
+        position: absolute;
+        bottom: 8px;
+        right: 10px;
+
+        filter: grayscale(1);
+
+        transition: .2s;
+
+        &:hover, &.active {
+            filter: none;
+            transform: scale(1.2);
+            outline: none;
+        }
+
+        :focus {
+            outline: none;
         }
     }
 }
