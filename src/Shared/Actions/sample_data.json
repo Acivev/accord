@@ -20,12 +20,6 @@
                     "SubChannels": [
                         {
                             "Id": 0,
-                            "ChannelIcon": {
-                                "Id": 0,
-                                "Name": "Chat Icon",
-                                "Emote": "",
-                                "Image": null
-                            },
                             "VoiceConnectedUsers": [
                                 {
                                     "Id": 0,
@@ -60,8 +54,28 @@
                                     },
                                     "Message": "I don't have lorem ipsum which means i gotta do all the messages Manually... well... how is life ? i hope it's pretty good as i need a shit long message to make sure EVERYTHING works totally fine smile... i still need a longer text.. FUCK. well, lets see how long i can get it by adding more and more words to it so he said, now he thinks about how much text does he still need ? well... Nobody will ever know, except me of course :) well, guess I'm a narrator now cause why not! Hello mine turtle, HELLO! i like twains.",
                                     "Timestamp": 1582717800039
+                                },
+                                {
+                                    "Id": 2,
+                                    "User": {
+                                        "Id": 0,
+                                        "Name": "Bot",
+                                        "Status": 0,
+                                        "Identifier": 4492
+                                    },
+                                    "Message": "Yet :smile: another message, this times with Emojis :smile:",
+                                    "Timestamp": 1582717800039
                                 }
                             ]
+                        },
+                        {
+                            "Id": 1,
+                            "VoiceConnectedUsers": [],
+                            "Name": "welcome home!",
+                            "Topic": "This is a sample Topic",
+                            "MessageCount": 0,
+                            "MessagesRead": 0,
+                            "MessageHistory": []
                         }
                     ]
                 }

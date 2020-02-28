@@ -10,9 +10,17 @@ export interface AvatarProps extends React.Props<AvatarProps> {
     User: IUser
 }
 
+// TODO: Implement different colored Avatars if no Avatar is set.
+/*
+function RandWithSeed(n: number, ma: number) {
+    const x = Math.sin(n) * 10000;
+    return (x - Math.floor(x)) * ma;
+}
+*/
+
 function Avatar(props: AvatarProps) {
     return (
-        <div id="Avatar" className={props.className} >
+        <div id="Avatar" className={props.className}>
             <img src={DefaultAvatar} className="image" alt="" />
             <div className="status" data-tip data-for={"tooltip-status-" + UserStatus[props.User.Status].toLowerCase()} />
         </div>

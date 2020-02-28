@@ -10,7 +10,7 @@
 * [x] Server Browser
 * [ ] Chat Bar
 * [ ] User Bar       -- Almost Done (Missing Voice Chat)
-* [ ] Chat           -- Almost Done (Missing Send Message and Emotes)
+* [x] Chat
 
 ## Basic API
 
@@ -27,6 +27,7 @@
 
 * [ ] Theme Engine        -- SASS Compatible
 * [ ] Markdown in Chat
+* [ ] Join messages if the same user sends multiple messages
 * [ ] Tutorial (How everything works)
 * [ ] Server News (if no channel is Selected)
 * [ ] Game News (What is currently happening)
@@ -44,7 +45,7 @@
 
 ## Later... maybe never
 
-* [ ] Firefox Support
+* [ ] Other Browser support Besides Chromium
 
 ## Community
 

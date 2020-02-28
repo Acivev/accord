@@ -17,6 +17,7 @@ export interface ChannelProps extends Props<ChannelProps> {
 function Channel(props: ChannelProps) {
     const channel: IChannel = props.Channel;
     const voiceUsers = [];
+    const localUser = (props as any).LocalUser;
     
     for (const voiceUser of channel.VoiceConnectedUsers) {
         voiceUsers.push(<VoiceChannelUser User={voiceUser}/>)
@@ -30,7 +31,7 @@ function Channel(props: ChannelProps) {
 
             <span className="icon">#</span>
             <span className={"name"}>{channel.Name.toLowerCase().replace(/ /g, "_")}</span>
-            <HeadsetMicIcon data-tip data-for="tooltip-voice-join" className="voiceJoin" onClick={_ => SiteStateStore.dispatch(VoiceJoin(channel))}/>
+            <HeadsetMicIcon data-tip data-for="tooltip-voice-join" className="voiceJoin" onClick={_ => SiteStateStore.dispatch(VoiceJoin(localUser, channel))}/>
             
             <div className="voiceUsers">
                 {voiceUsers}

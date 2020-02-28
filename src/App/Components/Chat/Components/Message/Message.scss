@@ -9,6 +9,11 @@
   overflow-x: visible;
   overflow-y: visible;
 
+  .emoji-mart-emoji {
+    margin-right: 3px;
+    transform: translate(2.5px, 5px);
+  }
+
   .avatar {
     position: relative;
     width: 50px;

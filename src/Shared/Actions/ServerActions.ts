@@ -28,6 +28,7 @@ export enum ServerActions {
     SHOW_CATEGORY = "server.category.show",
 
     SEND_MESSAGE = "server.message.send",
+    SHALLOW = "server.shallow"
 }
 
 export interface IServerAction extends AnyAction, IServerActionState { }
@@ -99,6 +100,12 @@ export const ServerActionReducer: Reducer<IServerActionState, IServerAction> =
                     ...state,
                     _shallow: hasChanged? new Date() : state._shallow,
                 };
+
+            case ServerActions.SHALLOW:
+                return {
+                    ...state,
+                    _shallow: new Date(),
+                }; 
 
             default:
                 return state;

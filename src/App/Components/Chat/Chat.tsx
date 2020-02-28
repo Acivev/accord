@@ -9,7 +9,6 @@ import Message from './Components/Message/Message';
 import 'Shared/EmojiMart.scss';
 import { SiteStateStore } from '../../../Shared/Globals';
 import { SendMessage } from './../../../Shared/Actions/ServerActions';
-import { Emoji } from 'emoji-mart';
 
 function OnSubmitChatMessage(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();

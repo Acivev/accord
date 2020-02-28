@@ -1,4 +1,3 @@
-import { IIcon } from '../Image';
 import { IUser } from '../User';
 
 export enum ChannelType {
@@ -10,8 +9,6 @@ export interface IChannel {
     Id: number
     Name: string
     Topic: string
-
-    ChannelIcon: IIcon
 
     VoiceConnectedUsers: IUser[]
 

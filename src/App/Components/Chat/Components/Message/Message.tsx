@@ -5,12 +5,57 @@ import "./Message.scss";
 
 import { IMessage } from "../../../../../API/v1/Servers/Channel";
 import Avatar from "../../../Shared/Avatar/Avatar";
+import { Emoji } from "emoji-mart";
 
 export interface MessageProps extends React.Props<MessageProps> {
     Message: IMessage
 }
 
 function Message(props: MessageProps) {
+    let regex = new RegExp('(^|\\s)(:[a-zA-Z0-9-_+]+:(:skin-tone-[2-6]:)?)', 'g')
+
+    const msg = [];
+
+    let lastOffset = 0;
+    let match = regex.exec(props.Message.Message);
+
+    while (match) {
+        match = regex.exec(props.Message.Message);
+        if (!match)
+            break;
+
+        const previousText = props.Message.Message.substring(
+            lastOffset,
+            match.index
+        );
+
+        if (previousText.length)
+            msg.push(<span>{previousText}</span>);
+
+        lastOffset = match.index + match[0].length;
+
+        const emoji = (
+            <Emoji
+                emoji={match[0].trim()}
+                fallback={((emoji: any, props: any) => { // Let's hack the world.
+                    return emoji ? `:${emoji.short_names[0]}:` : props.emoji
+                }) as any}
+                size={22}
+            />
+        );
+
+        if (emoji) {
+            msg.push(emoji);
+        } else {
+            msg.push(match[0]);
+        }        
+    }
+
+    if (lastOffset === 0)
+        msg.push(<span>{props.Message.Message}</span>);
+
+    console.log(msg);
+
     return (
         <div id="Message" >
             <Avatar className="avatar" User={props.Message.User} />
@@ -19,7 +64,7 @@ function Message(props: MessageProps) {
                 <div className="identity">
                     <span className="name">{props.Message.User.Name} <span className="identifier">#{props.Message.User.Identifier}</span></span>
                 </div>
-                <span className="message">{props.Message.Message}<span className="timeAgo"><TimeAgo date={props.Message.Timestamp} live={true}/></span></span>
+                <span className="message">{msg}<span className="timeAgo"><TimeAgo date={props.Message.Timestamp} live={true}/></span></span>
             </div>
         </div>
     );
