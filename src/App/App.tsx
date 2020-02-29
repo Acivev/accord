@@ -22,15 +22,16 @@ function App() {
     <AvatarTooltips />
     
     <div id="ServerInformation">
-      <SplitPane split="vertical" minSize={200} defaultSize={300} allowResize={true}>
+      <SplitPane split="vertical" minSize={200} defaultSize={300} maxSize={400} allowResize={true}>
 
       <Chatbar />
 
-      <Chat />
-      
+      <SplitPane split="vertical" minSize={"80%"} defaultSize={"80%"} allowResize={true}>
+        <Chat />
+        <Userbar />
       </SplitPane>
-      
-      {}
+
+      </SplitPane>
     </div>
   </div>;
 }

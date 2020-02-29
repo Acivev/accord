@@ -48,3 +48,11 @@ body {
 ::-webkit-scrollbar-thumb {
   background-color: $COL-MAIN + 30;
 }
+
+.absolute {
+  position: absolute;
+}
+
+.right {
+  right: 0;
+}

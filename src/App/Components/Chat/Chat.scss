@@ -61,13 +61,15 @@
     }
 
     .emoji-mart {
+        position: absolute;
+
         bottom: 30px;
         right: 30px;
-        position: fixed;
     }
 
     .EmojiPicker {
         position: absolute;
+        
         bottom: 8px;
         right: 10px;
 

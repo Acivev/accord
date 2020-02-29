@@ -8,9 +8,13 @@
 ## Basic Design
 
 * [x] Server Browser
-* [ ] Chat Bar
-* [ ] User Bar       -- Almost Done (Missing Voice Chat)
-* [x] Chat
+* [ ] Chat Bar      -- Almost Done (Missing Voice Chat)
+* [ ] User Bar
+* [ ] Chat          -- Redesign Message Input field
+
+## Basic Design (Later stage)
+
+* [ ] a way to modify Chat Messages (in case you've misspelled)
 
 ## Basic API
 
@@ -46,6 +50,7 @@
 ## Later... maybe never
 
 * [ ] Other Browser support Besides Chromium
+* [ ] Improve Emoji-mart OR create an EmojiPicker from Scratch as loading times are quite slow. it should be Cached.
 
 ## Community
 

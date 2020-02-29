@@ -1,0 +1,57 @@
+@import "Shared/Colors.scss";
+
+#User {
+    padding: 5px;
+    
+    .avatar {
+        position: relative;
+        width: 32px;
+        height: 32px;
+    
+        font-size: 30%;
+    }
+
+    // TODO: Move this into an separate Component as it's being used multiple times.
+    .identity {
+        position: absolute;
+
+        margin-left: 40px;
+        margin-top: -35px;
+  
+        .name {
+          position: relative;
+    
+          color: white;
+          font-weight: bold;
+    
+          .identifier {
+            position: relative;
+    
+            font-size: 0.6em;
+    
+            margin-top: 5px;
+            left: -.2%;
+    
+            font-weight: normal;
+            color: rgb(133, 133, 133);
+          }
+        }
+    }
+
+    span.status {
+        position: absolute;
+
+        margin-left: 40px;
+        margin-top: -16.5px;
+
+        font-size: .8em;
+
+        color: rgb(160, 160, 160);
+    }
+
+    .Bottom {
+      margin-top: auto;
+      bottom: 0;
+    }
+
+}

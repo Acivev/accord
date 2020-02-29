@@ -13,6 +13,20 @@
                 "File": null,
                 "Hash": ""
             },
+            "Users": [
+                {
+                    "Id": 0,
+                    "Name": "Bot",
+                    "Status": 0,
+                    "Identifier": 4492
+                },
+                {
+                    "Id": 1,
+                    "Name": "Mempler",
+                    "Status": 0,
+                    "Identifier": 6666
+                }
+            ],
             "Categories": [
                 {
                     "Id": 0,

@@ -1,0 +1,67 @@
+@import "Shared/Colors.scss";
+
+#CurrentUser {
+    position: absolute;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    background-color: $COL-THI;
+
+    width: 100%;
+
+    #User {
+        padding-left: 10px;
+    }
+
+    .settingBtn {
+        width: 32px;
+        height: 32px;
+
+        position: absolute;
+        
+        padding: 5px;
+        bottom: 5px;
+        right: 5px;
+
+        transition: .2s;
+        border-radius: 5px;
+
+        svg {
+            width: 28px;
+            height: 28px;
+
+            padding: 2.5px;
+        }
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.151);
+
+            svg {
+                animation: BouncingIcon .9s infinite;
+            }
+        }
+    }
+
+    bottom: 0;
+}
+
+@keyframes BouncingIcon
+{
+    0%, 60%, 100% {
+        transform-origin: center center;
+    }
+
+    0% {
+        transform: translate(0,0) rotate(180deg);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    to {
+        transform-origin: center center;
+        transform: translate(0, 0) rotate(0deg);
+    }
+}
+
