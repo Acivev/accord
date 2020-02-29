@@ -48,6 +48,19 @@ function Chat(props: any) {
 
     return (
         <div id="Chat">
+            <svg id="svg" style={{position: "absolute"}}>
+                <defs>
+                    <filter id="colorFilter">
+                        <feColorMatrix 
+                            color-interpolation-filters="sRGB"
+                            type="matrix"
+                            values="0.12 0     0     0   0
+                                    0    0.10  0     0   0
+                                    0    0     0.15  0   0
+                                    0    0     0     1   0 "/>
+                    </filter>
+                </defs>
+            </svg>
             <div className="ChatWrapper">
                 {messageHistory.reverse()}
             </div>

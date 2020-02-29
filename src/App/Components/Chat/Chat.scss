@@ -55,7 +55,6 @@
             color: $COL-TEXT;
             &:focus {
                 outline: none;
-                
             }
         }
     }
@@ -73,7 +72,7 @@
         bottom: 8px;
         right: 10px;
 
-        filter: grayscale(1);
+        filter: grayscale(1) url("#colorFilter") brightness(3);
 
         transition: .2s;
 
