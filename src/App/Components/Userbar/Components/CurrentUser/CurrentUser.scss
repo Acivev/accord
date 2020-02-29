@@ -2,8 +2,8 @@
 
 #CurrentUser {
     position: absolute;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 6.5px;
+    padding-bottom: 6.5px;
 
     background-color: $COL-THI;
 
@@ -25,6 +25,9 @@
 
         transition: .2s;
         border-radius: 5px;
+
+        margin-bottom: 2.5px;
+        margin-right: 2.5px;
 
         svg {
             width: 28px;
