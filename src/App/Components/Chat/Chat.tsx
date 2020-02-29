@@ -20,7 +20,7 @@ function Chat(props: any) {
     let messageHistory = []
 
     for (const message of channel.MessageHistory) {
-        messageHistory.push(<Message Message={message} />)
+        messageHistory.push(<Message Message={message} key={message.Id} />)
     }
 
     return (
@@ -29,7 +29,7 @@ function Chat(props: any) {
                 <defs>
                     <filter id="colorFilter">
                         <feColorMatrix 
-                            color-interpolation-filters="sRGB"
+                            colorInterpolationFilters="sRGB"
                             type="matrix"
                             values="0.12 0     0     0   0
                                     0    0.10  0     0   0

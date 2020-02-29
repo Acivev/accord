@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import "./ChatInput.scss";
 import OutsideClickHandler from "react-outside-click-handler";
-import { Picker, Emoji } from "emoji-mart";
+import { Picker, Emoji, EmojiData } from "emoji-mart";
 import { SiteStateStore } from "../../../../../Shared/Globals";
 import { SendMessage } from "../../../../../Shared/Actions/ServerActions";
 
@@ -19,12 +19,26 @@ function OnSubmitChatMessage(e: React.FormEvent<HTMLFormElement>) {
     textInput.value = "";
 }
 
+function EmojiSelected(setState: any, emoji: EmojiData)
+{
+    const textInput = document.getElementsByClassName("chatInput")[0].children[0] as HTMLInputElement;
+
+    setState({
+        IsPicking: false
+    });
+
+    textInput.value = textInput.value.trimEnd();
+    textInput.value += " " + emoji.colons + " ";
+
+    textInput.focus();
+}
+
 function ChatInput() {
     const [state, setState] = useState({
         IsPicking: false
     });
     
-    const picker = <Picker autoFocus={true} set="twitter" title="Select an Emoji..." />
+    const picker = <Picker autoFocus={true} set="twitter" title="Select an Emoji..." onSelect={e => EmojiSelected(setState, e)} />
     
     return (
         <div id="ChatInput" >
