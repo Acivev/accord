@@ -15,13 +15,10 @@ function Userbar(props: any) {
 
     for (const user of activeServer.Users) {
         if (user.Status !== UserStatus.Offline)
-            OnlineUsers.push(<User User={user}/>);
+            OnlineUsers.push(<User key={user.Id} User={user}/>);
         else
-            OfflineUsers.push(<User User={user}/>);
+            OfflineUsers.push(<User key={user.Id} User={user}/>);
     }
-
-    console.log(OnlineUsers);
-    console.log(OfflineUsers);
 
     return (
         <div id="Userbar">

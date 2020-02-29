@@ -15,9 +15,6 @@ SiteStateStore.dispatch(SampleServerList());
 SiteStateStore.dispatch(SampleLocalUser());
 SiteStateStore.dispatch(SetActive(SiteStateStore.getState().ServerActionReducer.ServerList[0]))
 
-
-console.log(Emoji.defaultProps);
-
 if (Emoji.defaultProps) {
     if (Emoji.defaultProps.set) 
         Emoji.defaultProps.set = "twitter";

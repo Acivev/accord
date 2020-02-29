@@ -20,7 +20,7 @@ function Channel(props: ChannelProps) {
     const localUser = (props as any).LocalUser;
     
     for (const voiceUser of channel.VoiceConnectedUsers) {
-        voiceUsers.push(<VoiceChannelUser User={voiceUser}/>)
+        voiceUsers.push(<VoiceChannelUser key={voiceUser.Id} User={voiceUser}/>)
     }
 
     return (
