@@ -32,6 +32,7 @@ function Message(props: MessageProps) {
 
         const emoji = (
             <Emoji
+                tooltip={true}
                 emoji={match[0].trim()}
                 fallback={((emoji: any, props: any) => { // Let's hack the world.
                     return emoji ? `:${emoji.short_names[0]}:` : props.emoji

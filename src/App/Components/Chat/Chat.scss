@@ -15,11 +15,13 @@
     .ChatWrapper {
         display: flex;
 
-        height: calc(100% - (60px));
-    
+        height: calc(100% - (70px));
+
         flex-flow: column-reverse;
 
         overflow-y: scroll;
+
+        padding-bottom: 12.5px;
 
         &::-webkit-scrollbar-track {
             width: 1px;
@@ -29,61 +31,6 @@
         &::-webkit-scrollbar-track-piece {
           width: 1px;
           background-color: #141018;
-        }
-    }
-
-    
-    .chatInput {        
-        width: 100%;
-        height: 50px;
-
-        color: $COL-TEXT;
-        
-        input {
-            overflow: none;
-            padding: 20px;
-
-            background-color: #141018;
-            border: none;
-
-            box-sizing: border-box;
-
-            border-top: 1px solid #141018 + 20;
-    
-            width: 100%;
-
-            color: $COL-TEXT;
-            &:focus {
-                outline: none;
-            }
-        }
-    }
-
-    .emoji-mart {
-        position: absolute;
-
-        bottom: 30px;
-        right: 30px;
-    }
-
-    .EmojiPicker {
-        position: absolute;
-        
-        bottom: 8px;
-        right: 10px;
-
-        filter: grayscale(1) url("#colorFilter") brightness(3);
-
-        transition: .2s;
-
-        &:hover, &.active {
-            filter: none;
-            transform: scale(1.2);
-            outline: none;
-        }
-
-        :focus {
-            outline: none;
         }
     }
 }
