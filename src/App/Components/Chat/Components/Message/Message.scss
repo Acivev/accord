@@ -10,8 +10,12 @@
   overflow-y: visible;
 
   .emoji-mart-emoji {
-    margin-right: 3px;
-    transform: translate(2.5px, 5px);
+    position: absolute;
+    transform: translate(-22.5px, 0px);
+  }
+
+  .msgPart {
+    padding-right: 25px;
   }
 
   .avatar {
@@ -57,7 +61,7 @@
     .message {
       position: relative;
 
-      top: 25px;
+      top: 27.5px;
 
       font-size: .9em;
       color: rgb(173, 173, 173);
