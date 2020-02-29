@@ -26,7 +26,7 @@ function App() {
 
       <Chatbar />
 
-      <SplitPane split="vertical" minSize={"80%"} defaultSize={"80%"} allowResize={true}>
+      <SplitPane split="vertical" minSize={200} defaultSize={300} maxSize={400} allowResize={true} primary="second">
         <Chat />
         <Userbar />
       </SplitPane>
