@@ -1,4 +1,4 @@
-import { IChannel } from './Channel';
+import { IChannel } from "./Channel";
 
 export interface ICategory {
     Id: number,

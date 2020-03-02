@@ -3,14 +3,14 @@
 ## Maintenance
 
 * [ ] Document Everything
-* [ ] Standardized CodeStyle
+* [x] Standardized CodeStyle
 
 ## Basic Design
 
 * [x] Server Browser
-* [ ] Chat Bar      -- Almost Done (Missing Voice Chat)
-* [ ] User Bar
-* [ ] Chat          -- Redesign Message Input field
+* [x] Chat Bar      -- (Missing Voice Chat, needs to be added at later design (after Basic API))
+* [x] User Bar
+* [x] Chat
 
 ## Basic Design (Later stage)
 
@@ -30,6 +30,7 @@
 ## Advanced Design
 
 * [ ] Theme Engine        -- SASS Compatible
+* [ ] Theming Editor. (using [this](https://github.com/microsoft/monaco-editor))
 * [ ] Markdown in Chat
 * [ ] Join messages if the same user sends multiple messages
 * [ ] Tutorial (How everything works)

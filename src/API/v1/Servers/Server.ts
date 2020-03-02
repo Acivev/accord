@@ -1,6 +1,6 @@
-import { IImage } from '../Image';
-import { ICategory } from './Chat';
-import { IUser } from '../User';
+import { IImage } from "../Image";
+import { ICategory } from "./Chat";
+import { IUser } from "../User";
 
 export interface IServer {
     Id: number

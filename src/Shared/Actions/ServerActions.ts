@@ -1,10 +1,9 @@
 import { AnyAction, Reducer } from "redux";
 import { IServer } from "../../API/v1/Servers/Server";
 
-
 // Dispatchable Events
-import sampleData from './sample_data.json';
-import { ICategory } from './../../API/v1/Servers/Chat';
+import sampleData from "./sample_data.json";
+import { ICategory } from "./../../API/v1/Servers/Chat";
 import { IChannel } from "../../API/v1/Servers/Channel";
 import { IUser } from "../../API/v1/User";
 
@@ -47,68 +46,70 @@ const EmptyServerList: IServerActionState = {
 export const ServerActionReducer: Reducer<IServerActionState, IServerAction> =
     (state = EmptyServerList, action: IServerAction) => {
         switch (action.type) {
-            case ServerActions.UPDATE:
-                return {
-                    ...state,
+        case ServerActions.UPDATE:
+            return {
+                ...state,
 
-                    ServerList: action.ServerList,
-                };
+                ServerList: action.ServerList,
+            };
 
-            case ServerActions.SET_ACTIVE:
-                return {
-                    ...state,
+        case ServerActions.SET_ACTIVE:
+            return {
+                ...state,
 
-                    LocalUser: !action.LocalUser ? state.LocalUser : action.LocalUser,
+                LocalUser: !action.LocalUser ? state.LocalUser : action.LocalUser,
 
-                    ActiveServer: !action.ActiveServer ? state.ActiveServer : action.ActiveServer,
-                    ActiveChannel: action.ActiveChannel,
-                };
+                ActiveServer: !action.ActiveServer ? state.ActiveServer : action.ActiveServer,
+                ActiveChannel: action.ActiveChannel,
+            };
 
-            case ServerActions.HIDE_CATEGORY:
-                return {
-                    ...state,
+        case ServerActions.HIDE_CATEGORY:
+            return {
+                ...state,
 
-                    HiddenCategories: state.HiddenCategories.concat(action.HiddenCategories),
-                }
+                HiddenCategories: state.HiddenCategories.concat(action.HiddenCategories),
+            };
 
-            case ServerActions.SHOW_CATEGORY:
-                return {
-                    ...state,
+        case ServerActions.SHOW_CATEGORY:
+            return {
+                ...state,
 
-                    HiddenCategories: state.HiddenCategories.filter((el) => !action.HiddenCategories.includes(el)),
-                }
+                HiddenCategories: state.HiddenCategories.filter((el) => !action.HiddenCategories.includes(el)),
+            };
 
-            case ServerActions.SEND_MESSAGE:
-                let hasChanged = false;
+        case ServerActions.SEND_MESSAGE:
+        {
+            let hasChanged = false;
 
-                if (state.ActiveChannel && state.LocalUser != null) {
-                    state.ActiveChannel.MessageCount++;
-                    state.ActiveChannel.MessagesRead++;
+            if (state.ActiveChannel && state.LocalUser != null) {
+                state.ActiveChannel.MessageCount++;
+                state.ActiveChannel.MessagesRead++;
 
-                    state.ActiveChannel.MessageHistory.push({
-                        Id: state.ActiveChannel.MessageHistory.length, // TODO: fetch Id from API
-                        Timestamp: new Date().getTime(),
-                        Message: action.Message,
-                        User: state.LocalUser
-                    });
+                state.ActiveChannel.MessageHistory.push({
+                    Id: state.ActiveChannel.MessageHistory.length, // TODO: fetch Id from API
+                    Timestamp: new Date().getTime(),
+                    Message: action.Message,
+                    User: state.LocalUser
+                });
 
-                    hasChanged = true;
-                } // else put error message... TODO: Implement Error Message
-                // TODO: Implement Server side API
+                hasChanged = true;
+            } // else put error message... TODO: Implement Error Message
+            // TODO: Implement Server side API
 
-                return {
-                    ...state,
-                    _shallow: hasChanged? new Date() : state._shallow,
-                };
+            return {
+                ...state,
+                _shallow: hasChanged? new Date() : state._shallow,
+            };
+        }
 
-            case ServerActions.SHALLOW:
-                return {
-                    ...state,
-                    _shallow: new Date(),
-                }; 
+        case ServerActions.SHALLOW:
+            return {
+                ...state,
+                _shallow: new Date(),
+            }; 
 
-            default:
-                return state;
+        default:
+            return state;
         }
     };
 
@@ -116,31 +117,31 @@ export const SampleServerList = () => {
     const list: IServer[] = sampleData.Servers;
 
     return { type: ServerActions.UPDATE, ServerList: list } as IServerAction;
-}
+};
 
 export const SampleLocalUser = () => {
     const user: IUser = sampleData.LocalUser;
 
     return SetActive(null, user);
-}
+};
 
 
 export const SetActive = (server: IServer | null, user: IUser | null = null) => {
     return { type: ServerActions.SET_ACTIVE, ActiveChannel: null, ActiveServer: server, LocalUser: user } as IServerAction;
-}
+};
 
 export const SetActiveChannel = (channel: IChannel) => {
     return { type: ServerActions.SET_ACTIVE, ActiveChannel: channel, ActiveServer: null } as IServerAction;
-}
+};
 
 export const HideCategory = (category: ICategory) => {
     return { type: ServerActions.HIDE_CATEGORY, HiddenCategories: [category] } as IServerAction;
-}
+};
 
 export const ShowCategory = (category: ICategory) => {
     return { type: ServerActions.SHOW_CATEGORY, HiddenCategories: [category] } as IServerAction;
-}
+};
 
 export const SendMessage = (message: string) => {
     return { type: ServerActions.SEND_MESSAGE, Message: message } as unknown as IServerAction;
-}
+};

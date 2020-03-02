@@ -2,16 +2,16 @@ import React from "react";
 import ReactTooltip from "react-tooltip";
 import { connect } from "react-redux";
 
-import 'Shared/ToolTips.scss';
+import "Shared/ToolTips.scss";
 
 function VoiceButtonsTooltips(props: any) {
 
     return (
         <div id="VoiceButtonsTooltips" >
             <ReactTooltip id="tooltip-voice-join"
-                    effect="solid"
-                    place={"top"}
-                    className="custom">
+                effect="solid"
+                place={"top"}
+                className="custom">
                 <span>
                     Join Voice
                 </span>

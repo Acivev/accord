@@ -1,26 +1,26 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
+import { Emoji } from "emoji-mart";
 
 import "./index.scss";
 
 import App from "./App/App";
 import * as serviceWorker from "./serviceWorker";
 import { SiteStateStore } from "./Shared/Globals";
-import { SampleServerList, SetActive, SampleLocalUser } from './Shared/Actions/ServerActions';
-import { Emoji } from 'emoji-mart';
+import { SampleServerList, SetActive, SampleLocalUser } from "./Shared/Actions/ServerActions";
 
 // TODO: Remove and replace with Proper API
 SiteStateStore.dispatch(SampleServerList());
 SiteStateStore.dispatch(SampleLocalUser());
-SiteStateStore.dispatch(SetActive(SiteStateStore.getState().ServerActionReducer.ServerList[0]))
+SiteStateStore.dispatch(SetActive(SiteStateStore.getState().ServerActionReducer.ServerList[0]));
 
 if (Emoji.defaultProps) {
     if (Emoji.defaultProps.set) 
         Emoji.defaultProps.set = "twitter";
         
     if (Emoji.defaultProps.backgroundImageFn) 
-        Emoji.defaultProps.backgroundImageFn('twitter', 64);
+        Emoji.defaultProps.backgroundImageFn("twitter", 64);
 }
 
 

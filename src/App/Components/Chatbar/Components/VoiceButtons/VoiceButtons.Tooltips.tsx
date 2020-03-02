@@ -2,7 +2,7 @@ import React from "react";
 import ReactTooltip from "react-tooltip";
 import { connect } from "react-redux";
 
-import 'Shared/ToolTips.scss';
+import "Shared/ToolTips.scss";
 
 function VoiceButtonsTooltips(props: any) {
     let micToolTip;
@@ -10,22 +10,22 @@ function VoiceButtonsTooltips(props: any) {
 
     // TODO: Add some fancy sounds!
     if (props.Muted)
-        micToolTip = <ReactTooltip id="tooltip-mic-off" effect="solid" place={"top"} className="custom"><span>Unmute</span></ReactTooltip>
+        micToolTip = <ReactTooltip id="tooltip-mic-off" effect="solid" place={"top"} className="custom"><span>Unmute</span></ReactTooltip>;
     else
-        micToolTip = <ReactTooltip id="tooltip-mic" effect="solid" place={"top"} className="custom"><span>Mute</span></ReactTooltip>
+        micToolTip = <ReactTooltip id="tooltip-mic" effect="solid" place={"top"} className="custom"><span>Mute</span></ReactTooltip>;
     
     if (props.Deafen)
-        deafToolTip = <ReactTooltip id="tooltip-headphones-off" effect="solid" place={"top"} className="custom"><span>Undeafen</span></ReactTooltip>
+        deafToolTip = <ReactTooltip id="tooltip-headphones-off" effect="solid" place={"top"} className="custom"><span>Undeafen</span></ReactTooltip>;
     else
-        deafToolTip = <ReactTooltip id="tooltip-headphones" effect="solid" place={"top"} className="custom"><span>Deafen</span></ReactTooltip>
+        deafToolTip = <ReactTooltip id="tooltip-headphones" effect="solid" place={"top"} className="custom"><span>Deafen</span></ReactTooltip>;
 
 
     return (
         <div id="VoiceButtonsTooltips" >
             <ReactTooltip id="tooltip-screenshare"
-                    effect="solid"
-                    place={"top"}
-                    className="custom">
+                effect="solid"
+                place={"top"}
+                className="custom">
                 <span>
                     Screenshare
                 </span>
@@ -35,9 +35,9 @@ function VoiceButtonsTooltips(props: any) {
             {deafToolTip}
 
             <ReactTooltip id="tooltip-hangup"
-                    effect="solid"
-                    place={"top"}
-                    className="custom">
+                effect="solid"
+                place={"top"}
+                className="custom">
                 <span>
                     Hangup
                 </span>

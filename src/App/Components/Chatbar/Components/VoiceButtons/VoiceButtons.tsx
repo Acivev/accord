@@ -3,13 +3,13 @@ import { connect } from "react-redux";
 
 import "./VoiceButtons.scss";
 
-import PhoneDisabledIcon from '@material-ui/icons/PhoneDisabled';
-import HeadsetIcon from '@material-ui/icons/Headset';
-import ScreenShareIcon from '@material-ui/icons/ScreenShare';
-import MicIcon from '@material-ui/icons/Mic';
+import PhoneDisabledIcon from "@material-ui/icons/PhoneDisabled";
+import HeadsetIcon from "@material-ui/icons/Headset";
+import ScreenShareIcon from "@material-ui/icons/ScreenShare";
+import MicIcon from "@material-ui/icons/Mic";
 
 import { SiteStateStore } from "../../../../../Shared/Globals";
-import { VoiceToggleMute, VoiceToggleDeafen, VoiceLeave } from './../../../../../Shared/Actions/VoiceActions';
+import { VoiceToggleMute, VoiceToggleDeafen, VoiceLeave } from "./../../../../../Shared/Actions/VoiceActions";
 
 function ToggleMic(e: any) {
     SiteStateStore.dispatch(VoiceToggleMute());

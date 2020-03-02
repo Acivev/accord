@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
-import './Userbar.scss'
-import { IServer } from './../../../API/v1/Servers/Server';
-import { connect } from 'react-redux';
-import { UserStatus } from '../../../API/v1/User';
-import User from './Components/User/User';
-import CurrentUser from './Components/CurrentUser/CurrentUser';
+import "./Userbar.scss";
+import { IServer } from "./../../../API/v1/Servers/Server";
+import { connect } from "react-redux";
+import { UserStatus } from "../../../API/v1/User";
+import User from "./Components/User/User";
+import CurrentUser from "./Components/CurrentUser/CurrentUser";
 
 function Userbar(props: any) {
     const activeServer: IServer = props.ActiveServer;
@@ -36,7 +36,7 @@ function Userbar(props: any) {
                 <CurrentUser />
             </div>
         </div>
-    )
+    );
 }
 
 export default connect(

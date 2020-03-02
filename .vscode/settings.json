@@ -1,7 +1,15 @@
 {
-    "cSpell.words": [
-        "Dispatchable",
-        "Userbar",
-        "Chatbar"
-    ]
+  "cSpell.words": [
+    "Dispatchable",
+    "Userbar",
+    "Chatbar"
+  ],
+  "git.ignoreLimitWarning": true,
+  "eslint.nodePath": ".vscode/pnpify",
+  "eslint.codeActionsOnSave.mode": "all",
+  "eslint.format.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "typescript.tsdk": ".vscode/pnpify/typescript/lib"
 }

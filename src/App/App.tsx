@@ -1,5 +1,5 @@
 import React from "react";
-import SplitPane from 'react-split-pane';
+import SplitPane from "react-split-pane";
 
 import "./App.scss";
 
@@ -13,27 +13,27 @@ import ChannelTooltips from "./Components/Chatbar/Components/Category/Components
 import AvatarTooltips from "./Components/Shared/Avatar/Avatar.Tooltips";
 
 function App() {
-  return <div className="App">
-    <ServerBrowser />
+    return <div className="App">
+        <ServerBrowser />
 
-    <ServerBrowserToolTips />
-    <VoiceButtonsTooltips />
-    <ChannelTooltips />
-    <AvatarTooltips />
+        <ServerBrowserToolTips />
+        <VoiceButtonsTooltips />
+        <ChannelTooltips />
+        <AvatarTooltips />
     
-    <div id="ServerInformation">
-      <SplitPane split="vertical" minSize={200} defaultSize={300} maxSize={400} allowResize={true}>
+        <div id="ServerInformation">
+            <SplitPane split="vertical" minSize={200} defaultSize={300} maxSize={400} allowResize={true}>
 
-      <Chatbar />
+                <Chatbar />
 
-      <SplitPane split="vertical" minSize={200} defaultSize={300} maxSize={400} allowResize={true} primary="second">
-        <Chat />
-        <Userbar />
-      </SplitPane>
+                <SplitPane split="vertical" minSize={200} defaultSize={300} maxSize={400} allowResize={true} primary="second">
+                    <Chat />
+                    <Userbar />
+                </SplitPane>
 
-      </SplitPane>
-    </div>
-  </div>;
+            </SplitPane>
+        </div>
+    </div>;
 }
 
 export default App;

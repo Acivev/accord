@@ -3,7 +3,7 @@ import React from "react";
 import "./Avatar.scss";
 
 import DefaultAvatar from "./Default.svg";
-import { IUser, UserStatus } from './../../../../API/v1/User';
+import { IUser, UserStatus } from "./../../../../API/v1/User";
 
 export interface AvatarProps extends React.Props<AvatarProps> {
     className?: string,

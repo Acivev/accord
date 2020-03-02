@@ -1,7 +1,7 @@
 import React, { Props } from "react";
 
 import "./VoiceChannelUser.scss";
-import { IUser } from './../../../../../../../../../API/v1/User';
+import { IUser } from "./../../../../../../../../../API/v1/User";
 import Avatar from "../../../../../../../Shared/Avatar/Avatar";
 
 // import SampleImage from './SampleImage.png';

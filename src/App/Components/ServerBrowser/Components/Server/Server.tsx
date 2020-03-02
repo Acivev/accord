@@ -1,10 +1,10 @@
-import React from 'react';
-import { connect } from 'react-redux';
+import React from "react";
+import { connect } from "react-redux";
 
 import "./Server.scss";
-import { SetActive } from '../../../../../Shared/Actions/ServerActions';
-import { SiteStateStore } from '../../../../../Shared/Globals';
-import { IServer } from '../../../../../API/v1/Servers/Server';
+import { SetActive } from "../../../../../Shared/Actions/ServerActions";
+import { SiteStateStore } from "../../../../../Shared/Globals";
+import { IServer } from "../../../../../API/v1/Servers/Server";
 
 function Server(props: any) {
     let classes = "";
@@ -26,7 +26,7 @@ function Server(props: any) {
                 <div className="indicator" />
             </div>
         </div>
-    )
+    );
 }
 
 export default connect(

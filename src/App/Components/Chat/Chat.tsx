@@ -1,14 +1,14 @@
-import React from 'react';
-import { connect } from 'react-redux';
+import React from "react";
+import { connect } from "react-redux";
 
-import './Chat.scss'
+import "./Chat.scss";
 
-import Message from './Components/Message/Message';
-import { IServer } from './../../../API/v1/Servers/Server';
-import { IChannel } from '../../../API/v1/Servers/Channel';
+import Message from "./Components/Message/Message";
+import { IServer } from "./../../../API/v1/Servers/Server";
+import { IChannel } from "../../../API/v1/Servers/Channel";
 
-import 'Shared/EmojiMart.scss';
-import ChatInput from './Components/ChatInput/ChatInput';
+import "Shared/EmojiMart.scss";
+import ChatInput from "./Components/ChatInput/ChatInput";
 
 function Chat(props: any) {
     const activeServer: IServer = props.ActiveServer;
@@ -17,10 +17,10 @@ function Chat(props: any) {
     if (channel === null || activeServer === null)
         return <div />;
 
-    let messageHistory = []
+    let messageHistory = [];
 
     for (const message of channel.MessageHistory) {
-        messageHistory.push(<Message Message={message} key={message.Id} />)
+        messageHistory.push(<Message Message={message} key={message.Id} />);
     }
 
     return (
@@ -44,7 +44,7 @@ function Chat(props: any) {
 
             <ChatInput />
         </div>
-    )
+    );
 }
 
 export default connect(

@@ -38,7 +38,7 @@ function ChatInput() {
         IsPicking: false
     });
     
-    const picker = <Picker autoFocus={true} set="twitter" title="Select an Emoji..." onSelect={e => EmojiSelected(setState, e)} />
+    const picker = <Picker autoFocus={true} set="twitter" title="Select an Emoji..." onSelect={e => EmojiSelected(setState, e)} />;
     
     return (
         <div id="ChatInput" >
@@ -53,11 +53,11 @@ function ChatInput() {
                 </div>
 
                 <OutsideClickHandler onOutsideClick={_ => setState({ IsPicking: false })}>
-                { state.IsPicking ? picker : (<section />) }
+                    { state.IsPicking ? picker : (<section />) }
             
-                <div className={"EmojiPicker " + (state.IsPicking ? "active" : "")}>
-                    <Emoji emoji=":smile:" size={32} onClick={(_: any) => setState({ IsPicking: !state.IsPicking })}/>
-                </div>
+                    <div className={"EmojiPicker " + (state.IsPicking ? "active" : "")}>
+                        <Emoji emoji=":smile:" size={32} onClick={(_: any) => setState({ IsPicking: !state.IsPicking })}/>
+                    </div>
                 </OutsideClickHandler>
             </form>
         </div>

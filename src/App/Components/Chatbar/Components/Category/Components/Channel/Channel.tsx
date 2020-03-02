@@ -1,14 +1,14 @@
-import React, { Props } from 'react';
+import React, { Props } from "react";
 
-import './Channel.scss'
-import { IChannel } from '../../../../../../../API/v1/Servers/Channel';
+import "./Channel.scss";
+import { IChannel } from "../../../../../../../API/v1/Servers/Channel";
 
-import HeadsetMicIcon from '@material-ui/icons/HeadsetMic';
-import { SiteStateStore } from './../../../../../../../Shared/Globals';
-import { VoiceJoin } from './../../../../../../../Shared/Actions/VoiceActions';
-import VoiceChannelUser from './Components/VoiceChannelUser/VoiceChannelUser';
-import { connect } from 'react-redux';
-import { SetActiveChannel } from './../../../../../../../Shared/Actions/ServerActions';
+import HeadsetMicIcon from "@material-ui/icons/HeadsetMic";
+import { SiteStateStore } from "./../../../../../../../Shared/Globals";
+import { VoiceJoin } from "./../../../../../../../Shared/Actions/VoiceActions";
+import VoiceChannelUser from "./Components/VoiceChannelUser/VoiceChannelUser";
+import { connect } from "react-redux";
+import { SetActiveChannel } from "./../../../../../../../Shared/Actions/ServerActions";
 
 export interface ChannelProps extends Props<ChannelProps> {
     Channel: IChannel,
@@ -20,7 +20,7 @@ function Channel(props: ChannelProps) {
     const localUser = (props as any).LocalUser;
     
     for (const voiceUser of channel.VoiceConnectedUsers) {
-        voiceUsers.push(<VoiceChannelUser key={voiceUser.Id} User={voiceUser}/>)
+        voiceUsers.push(<VoiceChannelUser key={voiceUser.Id} User={voiceUser}/>);
     }
 
     return (
@@ -38,7 +38,7 @@ function Channel(props: ChannelProps) {
             </div>
         
         </div>
-    )
+    );
 }
 
 export default connect(

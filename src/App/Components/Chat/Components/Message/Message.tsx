@@ -12,7 +12,7 @@ export interface MessageProps extends React.Props<MessageProps> {
 }
 
 function Message(props: MessageProps) {
-    let regex = new RegExp('(^|\\s)(:[a-zA-Z0-9-_+]+:(:skin-tone-[2-6]:)?)', 'g')
+    let regex = new RegExp("(^|\\s)(:[a-zA-Z0-9-_+]+:(:skin-tone-[2-6]:)?)", "g");
 
     const msg = [];
 
@@ -34,7 +34,7 @@ function Message(props: MessageProps) {
                 tooltip={true}
                 emoji={match[0].trim()}
                 fallback={((emoji: any, props: any) => { // Let's hack the world.
-                    return emoji ? `:${emoji.short_names[0]}:` : props.emoji
+                    return emoji ? `:${emoji.short_names[0]}:` : props.emoji;
                 }) as any}
                 size={22}
                 key={match.index + lastOffset}
