@@ -14,6 +14,7 @@ accord is a Social app such as Discord or Slack.
 ```s
 ~$ git clone https://github.com/accord-app/accord-app.git
 ~$ cd accord-app
+~$ yarn
 ~$ yarn start
 ```
 
@@ -22,6 +23,7 @@ accord is a Social app such as Discord or Slack.
 ```s
 ~$ git clone https://github.com/accord-app/accord-app.git
 ~$ cd accord-app
+~$ yarn
 ~$ yarn build
 ```
 
