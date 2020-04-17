@@ -7437,14 +7437,14 @@ fsevents@^1.2.7:
   linkType: hard
 
 "in-publish@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "in-publish@npm:2.0.0"
+  version: 2.0.1
+  resolution: "in-publish@npm:2.0.1"
   bin:
     in-install: in-install.js
     in-publish: in-publish.js
     not-in-install: not-in-install.js
     not-in-publish: not-in-publish.js
-  checksum: 2/6ebbff892720f2971aa2f1f2d3406a927874837ddb2a2f93941d02ee0cfb233183bdbb2aa8270509a29e59f068087646bb87a1c9d9b1ccd7df64ae28ff27425c
+  checksum: 2/8d2296b25310b5288e7f3921354cdc58f55a1e2c75c261b2ca04faf7fd20f77f221c0885592135bf595e9bf4245a3cf493b85d192f61e295a0ae44eb7c7989db
   languageName: node
   linkType: hard
 
@@ -14493,11 +14493,11 @@ resolve@1.15.0:
 
 "typescript@patch:typescript@~3.7.2#builtin<compat/typescript>":
   version: 3.7.5
-  resolution: "typescript@patch:typescript@npm%3A3.7.5#builtin<compat/typescript>::version=3.7.5&hash=273569"
+  resolution: "typescript@patch:typescript@npm%3A3.7.5#builtin<compat/typescript>::version=3.7.5&hash=270b6c"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 2/15c69b5cf2b7005de5cfe3120496f4ceb99c628bd69e735b65b2629b4c34cc867a9fd26de6f05d841e08a05727af6d6e2979c39220d2364b5b6c5854fd7d88ff
+  checksum: 2/447a75c724fd7b8de4ab759961bdd24e4747e0341febf10b90dbf791416e9c469ed986bbdf4b42b085c595b41c4c3e90d6a035e756c34d8b167c01516882d52c
   languageName: node
   linkType: hard
 
