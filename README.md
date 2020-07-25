@@ -2,7 +2,7 @@
 
 # Accord
 
-accord is a Social app such as Discord or Slack.
+accord is a Social app such as Discord or Slack. just open source!
 
 ## Requirements
 
@@ -12,8 +12,8 @@ accord is a Social app such as Discord or Slack.
 ## How to run from Source
 
 ```s
-~$ git clone https://github.com/accord-app/accord-app.git
-~$ cd accord-app
+~$ git clone https://github.com/accord-app/accord.git
+~$ cd accord
 ~$ yarn
 ~$ yarn start
 ```
@@ -21,8 +21,8 @@ accord is a Social app such as Discord or Slack.
 ## How to Build from Source
 
 ```s
-~$ git clone https://github.com/accord-app/accord-app.git
-~$ cd accord-app
+~$ git clone https://github.com/accord-app/accord.git
+~$ cd accord
 ~$ yarn
 ~$ yarn build
 ```

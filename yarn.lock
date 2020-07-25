@@ -2277,7 +2277,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/keyv@npm:*, @types/keyv@npm:^3.1.1":
+"@types/keyv@npm:*":
   version: 3.1.1
   resolution: "@types/keyv@npm:3.1.1"
   dependencies:
@@ -15507,11 +15507,11 @@ resolve@1.15.0:
 
 "typescript@patch:typescript@~3.7.2#builtin<compat/typescript>":
   version: 3.7.5
-  resolution: "typescript@patch:typescript@npm%3A3.7.5#builtin<compat/typescript>::version=3.7.5&hash=270b6c"
+  resolution: "typescript@patch:typescript@npm%3A3.7.5#builtin<compat/typescript>::version=3.7.5&hash=273569"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 2/447a75c724fd7b8de4ab759961bdd24e4747e0341febf10b90dbf791416e9c469ed986bbdf4b42b085c595b41c4c3e90d6a035e756c34d8b167c01516882d52c
+  checksum: 2/a709303525c2d601916582db1f0ceb05cc258ac7a148cab267fd9779d50f116414a88fb82f5d50955cccef71f0689b4d58828fa0c49736630006c112f7ee7316
   languageName: node
   linkType: hard
 
