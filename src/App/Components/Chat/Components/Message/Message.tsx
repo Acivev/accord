@@ -17,7 +17,8 @@ function Message(props: MessageProps) {
     const msg = [];
 
     let lastOffset = 0;
-    let match = regex.exec(props.Message.Message.trim());
+    let match = regex.exec(props.Message.Message);
+    console.log(match);
     while (match) {
         const previousText = props.Message.Message.substring(
             lastOffset,
@@ -36,7 +37,7 @@ function Message(props: MessageProps) {
                 fallback={((emoji: any, props: any) => { // Let's hack the world.
                     return emoji ? `:${emoji.short_names[0]}:` : props.emoji;
                 }) as any}
-                size={22}
+                size={24}
                 key={match.index + lastOffset}
             />
         );
@@ -44,7 +45,7 @@ function Message(props: MessageProps) {
         if (emoji) {
             msg.push(emoji);
         } else {
-            msg.push(<span key={match.index + match[0]} className="msgPart">{match[0]}</span>);
+            msg.push(<span key={match.index + match[0]} className="msgPart">{match[0] + " "}</span>);
         }
         
         match = regex.exec(props.Message.Message);

@@ -9,15 +9,6 @@
   overflow-x: visible;
   overflow-y: visible;
 
-  .emoji-mart-emoji {
-    position: absolute;
-    transform: translate(-22.5px, 0px);
-  }
-
-  .msgPart {
-    padding-right: 25px;
-  }
-
   .avatar {
     position: relative;
     width: 50px;
@@ -30,12 +21,9 @@
     position: relative;
 
     left: 60px;
-
-    top: -58px;
+    top: -50px;
 
     .identity {
-      position: absolute;
-
       top: 7.5px;
 
       .name {
@@ -60,11 +48,39 @@
 
     .message {
       position: relative;
+  
+      font-size: .95em;
 
-      top: 27.5px;
-      
-      font-size: .9em;
       color: rgb(173, 173, 173);
+
+      display: table;
+
+      .msgPart {
+        display: table-cell;
+        vertical-align: middle;
+      }
+
+      .emoji-mart-emoji {
+        display: table-cell;
+        vertical-align: middle;
+
+        font-size: 1.5em !important;
+        
+        padding-left: 2px;
+        padding-right: 2px;
+
+        width: 1em !important;
+        height: 1em !important;
+
+        span {
+          position: absolute;
+
+          width: 1em !important;
+          height: 1em !important;
+
+          transform: translate(-0.01em, -0.5em);
+        }
+      }
     }
   
     .timeAgo {
@@ -72,8 +88,8 @@
 
       left: 0;
       top: 100%;
-      margin-top: 5px;
-      width: 100px;
+      margin-top: 2.5px;
+      width: 150px;
       
 
       font-size: .8em;

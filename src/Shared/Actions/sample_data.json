@@ -79,6 +79,17 @@
                                     },
                                     "Message": "Yet :smile: another message, this time with Emojis :smile:",
                                     "Timestamp": 1582717800039
+                                },
+                                {
+                                    "Id": 3,
+                                    "User": {
+                                        "Id": 0,
+                                        "Name": "Bot",
+                                        "Status": 0,
+                                        "Identifier": 4492
+                                    },
+                                    "Message": ":smile::smile::smile::smile::smile::smile::smile::smile:",
+                                    "Timestamp": 1597615279337
                                 }
                             ]
                         },
