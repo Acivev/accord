@@ -47,7 +47,7 @@ export const VoiceActionReducer: Reducer<IVoiceActionState, IVoiceAction> =
             // TODO: Implement an Audio Indicator.
 
             const localUser = state.LocalUser;
-            let activeChannel = action.ActiveChannel;
+            const activeChannel = action.ActiveChannel;
 
             setTimeout(() => { // if another channel was joined before, leave.
                 SiteStateStore.dispatch({type: VoiceActions.LEAVE, ActiveChannel: state.ActiveChannel} as IServerAction);

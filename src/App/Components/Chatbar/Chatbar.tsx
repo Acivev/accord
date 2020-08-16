@@ -1,15 +1,15 @@
-import React from 'react';
-import { connect } from 'react-redux';
+import React from "react";
+import { connect } from "react-redux";
 
-import './Chatbar.scss'
-import ServerImage from './Components/ServerImage/ServerImage';
-import { IServer } from '../../../API/v1/Servers/Server';
-import Category from './Components/Category/Category';
-import VoiceButtons from './Components/VoiceButtons/VoiceButtons';
+import "./Chatbar.scss";
+import ServerImage from "./Components/ServerImage/ServerImage";
+import { IServer } from "../../../API/v1/Servers/Server";
+import Category from "./Components/Category/Category";
+import VoiceButtons from "./Components/VoiceButtons/VoiceButtons";
 
 function Chatbar(props: any) {
     if (!props.ActiveServer)
-        return <div />
+        return <div />;
 
     const activeServer: IServer = props.ActiveServer;
 
@@ -32,7 +32,7 @@ function Chatbar(props: any) {
             </div>
 
         </div>
-    )
+    );
 }
 
 export default connect(

@@ -12,7 +12,7 @@ export interface MessageProps extends React.Props<MessageProps> {
 }
 
 function Message(props: MessageProps) {
-    let regex = new RegExp("(^|\\s)(:[a-zA-Z0-9-_+]+:(:skin-tone-[2-6]:)?)", "g");
+    const regex = new RegExp("(^|\\s)(:[a-zA-Z0-9-_+]+:(:skin-tone-[2-6]:)?)", "g");
 
     const msg = [];
 

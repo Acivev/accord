@@ -17,7 +17,7 @@ function Category(props: any) {
         channelList.push(<Channel key={channel.Id} Channel={channel} />);
     }
 
-    let shouldHide = hiddenCategories.includes(category);
+    const shouldHide = hiddenCategories.includes(category);
 
     return (
         <div id="Category" className={shouldHide ? "hidden" : ""}>

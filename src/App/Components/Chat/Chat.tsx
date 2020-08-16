@@ -17,7 +17,7 @@ function Chat(props: any) {
     if (channel === null || activeServer === null)
         return <div />;
 
-    let messageHistory = [];
+    const messageHistory = [];
 
     for (const message of channel.MessageHistory) {
         messageHistory.push(<Message Message={message} key={message.Id} />);
