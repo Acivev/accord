@@ -13,8 +13,11 @@ function OnSubmitChatMessage(e: React.FormEvent<HTMLFormElement>) {
 
     const textInput = target.getElementsByClassName("chatInput")[0].children[0] as HTMLInputElement;
 
+    if (textInput.value.trim() === "")
+        return;
+
     if (textInput.value)
-        SiteStateStore.dispatch(SendMessage(textInput.value));
+        SiteStateStore.dispatch(SendMessage(textInput.value.trim()));
 
     textInput.value = "";
 }
@@ -38,7 +41,7 @@ function ChatInput() {
         IsPicking: false
     });
     
-    const picker = <Picker autoFocus={true} set="twitter" title="Select an Emoji..." onSelect={e => EmojiSelected(setState, e)} />;
+    const picker = <Picker theme={"dark"} autoFocus={true} set="twitter" title="Select an Emoji..." onSelect={e => EmojiSelected(setState, e)} />;
     
     return (
         <div id="ChatInput" >

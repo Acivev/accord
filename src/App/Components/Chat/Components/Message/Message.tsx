@@ -17,7 +17,7 @@ function Message(props: MessageProps) {
     const msg = [];
 
     let lastOffset = 0;
-    let match = regex.exec(props.Message.Message);
+    let match = regex.exec(props.Message.Message.trim());
     while (match) {
         const previousText = props.Message.Message.substring(
             lastOffset,
