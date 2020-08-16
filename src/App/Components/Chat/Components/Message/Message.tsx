@@ -45,7 +45,7 @@ function Message(props: MessageProps) {
         if (emoji) {
             msg.push(emoji);
         } else {
-            msg.push(<span key={match.index + match[0]} className="msgPart">{match[0] + " "}</span>);
+            msg.push(<span key={match.index + match[0]} className="msgPart">{match[0]}</span>);
         }
         
         match = regex.exec(props.Message.Message);
