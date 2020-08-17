@@ -98,6 +98,8 @@
       cursor: context-menu;
       transition: .5s;
 
+      user-select: none;
+
       &:hover {
         color: gray + 50;
       }
