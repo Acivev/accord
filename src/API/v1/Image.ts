@@ -8,5 +8,5 @@ export interface IIcon {
     Name: string
 
     Emote?: string
-    Image?: IIcon | null
+    Image?: IImage | null
 }

@@ -1,8 +1,7 @@
 import { IUser } from "../User";
 
 export enum ChannelType {
-    Text = 0,
-    Voice = 1
+    Text = 0
 }
 
 export interface IChannel {

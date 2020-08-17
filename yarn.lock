@@ -1875,6 +1875,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@msgpack/msgpack@npm:^1.12.2":
+  version: 1.12.2
+  resolution: "@msgpack/msgpack@npm:1.12.2"
+  checksum: f98127bdee855dde47e26c0ecf14bd45f0e0177e6fc51754c994fef44f5c69704880cf2dbecf8941ff1e7ee28569bf2e18d5027278e3be595b95928d59bfb02f
+  languageName: node
+  linkType: hard
+
 "@nodelib/fs.scandir@npm:2.1.3":
   version: 2.1.3
   resolution: "@nodelib/fs.scandir@npm:2.1.3"
@@ -2972,6 +2979,7 @@ __metadata:
   dependencies:
     "@material-ui/core": ^4.11.0
     "@material-ui/icons": ^4.9.1
+    "@msgpack/msgpack": ^1.12.2
     "@testing-library/jest-dom": ^5.11.0
     "@testing-library/react": ^10.4.3
     "@testing-library/user-event": ^12.0.11

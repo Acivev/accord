@@ -10,9 +10,11 @@ import * as serviceWorker from "./serviceWorker";
 import { SiteStateStore } from "./Shared/Globals";
 import { SampleServerList, SetActive, SampleLocalUser } from "./Shared/Actions/ServerActions";
 
+import "./API";
+
 // TODO: Remove and replace with Proper API
 SiteStateStore.dispatch(SampleServerList());
-SiteStateStore.dispatch(SampleLocalUser());
+SiteStateStore.dispatch(SampleLocalUser()); // Temp user, will later be replaced by the API if not in dummy mode
 SiteStateStore.dispatch(SetActive(SiteStateStore.getState().ServerActionReducer.ServerList[0]));
 
 if (Emoji.defaultProps) {

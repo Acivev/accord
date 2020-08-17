@@ -38,6 +38,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "virtual:2a8b6f376369686f0c4333cb6fc9bf60a56e28e88784ee7e8fbec031fcefe791c1bbdd7bfcde6f626dbed64ffb1b8171ad186bc7f89a677221be73dc04cbb830#npm:4.9.1"
       ],
       [
+        "@msgpack/msgpack",
+        "npm:1.12.2"
+      ],
+      [
         "@testing-library/jest-dom",
         "npm:5.11.0"
       ],
@@ -183,6 +187,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@material-ui/core", "virtual:2a8b6f376369686f0c4333cb6fc9bf60a56e28e88784ee7e8fbec031fcefe791c1bbdd7bfcde6f626dbed64ffb1b8171ad186bc7f89a677221be73dc04cbb830#npm:4.11.0"],
             ["@material-ui/icons", "virtual:2a8b6f376369686f0c4333cb6fc9bf60a56e28e88784ee7e8fbec031fcefe791c1bbdd7bfcde6f626dbed64ffb1b8171ad186bc7f89a677221be73dc04cbb830#npm:4.9.1"],
+            ["@msgpack/msgpack", "npm:1.12.2"],
             ["@testing-library/jest-dom", "npm:5.11.0"],
             ["@testing-library/react", "virtual:2a8b6f376369686f0c4333cb6fc9bf60a56e28e88784ee7e8fbec031fcefe791c1bbdd7bfcde6f626dbed64ffb1b8171ad186bc7f89a677221be73dc04cbb830#npm:10.4.3"],
             ["@testing-library/user-event", "virtual:2a8b6f376369686f0c4333cb6fc9bf60a56e28e88784ee7e8fbec031fcefe791c1bbdd7bfcde6f626dbed64ffb1b8171ad186bc7f89a677221be73dc04cbb830#npm:12.0.11"],
@@ -2392,6 +2397,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["@msgpack/msgpack", [
+        ["npm:1.12.2", {
+          "packageLocation": "./.yarn/cache/@msgpack-msgpack-npm-1.12.2-3434bcf292-f98127bdee.zip/node_modules/@msgpack/msgpack/",
+          "packageDependencies": [
+            ["@msgpack/msgpack", "npm:1.12.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["@nodelib/fs.scandir", [
         ["npm:2.1.3", {
           "packageLocation": "./.yarn/cache/@nodelib-fs.scandir-npm-2.1.3-92e0b8f0d5-1f100655dd.zip/node_modules/@nodelib/fs.scandir/",
@@ -3659,6 +3673,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["accord", "workspace:."],
             ["@material-ui/core", "virtual:2a8b6f376369686f0c4333cb6fc9bf60a56e28e88784ee7e8fbec031fcefe791c1bbdd7bfcde6f626dbed64ffb1b8171ad186bc7f89a677221be73dc04cbb830#npm:4.11.0"],
             ["@material-ui/icons", "virtual:2a8b6f376369686f0c4333cb6fc9bf60a56e28e88784ee7e8fbec031fcefe791c1bbdd7bfcde6f626dbed64ffb1b8171ad186bc7f89a677221be73dc04cbb830#npm:4.9.1"],
+            ["@msgpack/msgpack", "npm:1.12.2"],
             ["@testing-library/jest-dom", "npm:5.11.0"],
             ["@testing-library/react", "virtual:2a8b6f376369686f0c4333cb6fc9bf60a56e28e88784ee7e8fbec031fcefe791c1bbdd7bfcde6f626dbed64ffb1b8171ad186bc7f89a677221be73dc04cbb830#npm:10.4.3"],
             ["@testing-library/user-event", "virtual:2a8b6f376369686f0c4333cb6fc9bf60a56e28e88784ee7e8fbec031fcefe791c1bbdd7bfcde6f626dbed64ffb1b8171ad186bc7f89a677221be73dc04cbb830#npm:12.0.11"],
